@@ -2,9 +2,9 @@
 #define BINANCEFEED_H
 
 #include <vector>
-#include <cstdint>
+#include <stop_token>
 
-namespace md {
+namespace MarketData {
     struct OrderBookSnapshot {
         std::int64_t last_update_id;
         std::vector<std::pair<double, double>> bids;
@@ -16,7 +16,8 @@ namespace md {
         BinanceFeed();
         void run();
 
-    // private:
+    private:
+        void websocket_worker(std::stop_token token);
         OrderBookSnapshot fetch_order_book_snapshot();
     };
 }
