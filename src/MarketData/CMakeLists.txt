@@ -3,6 +3,7 @@
 add_library(MarketData
         BinanceFeed.h
         BinanceFeed.cpp
+        LockFreeRingBuffer.h
 )
 
 # Third-party dependencies

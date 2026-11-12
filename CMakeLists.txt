@@ -14,6 +14,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Keeps the code closer to standard C++20
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# Expose JThread and stop_source as they may be hidden when using Apple Clang 17 on macOS
+add_compile_options(-fexperimental-library)
+
 # Include the MarketData library
 add_subdirectory(src/MarketData)
 

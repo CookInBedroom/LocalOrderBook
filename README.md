@@ -1,4 +1,6 @@
-# TradingSystemCpp20
+# LocalOrderBook
+1. explain the alignas padding, atomic head, tail release and acquire and how that ensures lock free buffer read/write
+2. 
 
 
 # packages
